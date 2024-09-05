@@ -1,0 +1,160 @@
+.productdisplay{
+    display: flex;  
+    margin: 0px 80px;
+}
+.productdisplay-left{
+    display: flex;
+    gap: 5px;
+}
+.productdisplay-img-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.productdisplay-img-list img{
+      height: 220px;
+}
+
+.productdisplay-main-img{
+    width: 450px;
+    height: 450px;
+}
+.productdisplay-right{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 40px;
+}
+
+.productdisplay-right h1{
+    color: #3d3d3d;
+    font-size: 30px;
+    font-weight: 600;
+}
+.star-img{
+    height: 32px;
+    width: 32px;
+
+}
+.productdisplay-main-star{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+    color: #1c1c1c;
+    font-size: 16px;
+}
+.productdisplay-right-prices{
+    display: flex;
+    margin: 20px 0px;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+.productdisplay-right-prices-old{
+    color: #818181;
+    text-decoration: line-through;
+}
+.productdisplay-right-prices-new{
+    color: #ff4141;
+
+}
+.productdisply-right-description{
+    font-size: 16.5px;
+    font-weight: 400;
+    width: 530px;
+}
+.productdisplay-right-size h1{
+    margin-top: 20px;
+    color: #656565;
+    font-size: 27px;
+    font-weight: 600;
+}
+.productdisplay-right-sizes{
+    display: flex;    
+    margin: 15px 0px;
+    gap: 20px;
+}
+.productdisplay-right-sizes div{
+    padding: 12px  18px;   
+    background: #bdb7b7;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.productdisplay-right-sizes div:hover{
+    background: #8b8888;   
+}
+.productdisplay-right-category{
+    margin-top: 10px;
+    
+
+}.productdisplay-right-category span{
+    font-weight: 600;   
+
+}
+.productdisplay-right button{
+    padding: 15px 25px;
+    width: 135px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background: #ff4141;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.productdisplay-right button:hover{
+    background: #db1515;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
