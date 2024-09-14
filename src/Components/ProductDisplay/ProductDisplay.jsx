@@ -1,22 +1,30 @@
-import React, { useState, useContext } from 'react';
-import './ProductDisplay.css';
-import star_icon from '../Assets/star-icon.png';
-import star_dull_icon from '../Assets/star-dull-icon.png';
-import { ShopContext } from '../../Context/ShopContext';
+import React, { useState, useContext } from "react";
+import "./ProductDisplay.css";
+import star_icon from "../Assets/star-icon.png";
+import star_dull_icon from "../Assets/star-dull-icon.png";
+import { ShopContext } from "../../Context/ShopContext";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const ProductDisplay = (props) => {
   const { product } = props;
   const { addToCart, setSize } = useContext(ShopContext);
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const Hanldesize = (e) => {
     setSize(e.target.value);
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const selectedSize = document.querySelector('input[name="size"]:checked');
     if (selectedSize) {
       addToCart(product.id);
+      setIsOpen(true);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 2000);
     } else {
       alert("Please select a size.");
     }
@@ -60,27 +68,72 @@ const ProductDisplay = (props) => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="productdisplay-right-size">
-            <h1>Select Size</h1>          
+            <h1>Select Size</h1>
             <div className="productdisplay-right-sizes">
               <label htmlFor="S">S</label>
-              <input type="radio" name="size" id="S" value="S" onChange={Hanldesize} required/>
+              <input
+                type="radio"
+                name="size"
+                id="S"
+                value="S"
+                onChange={Hanldesize}
+                required
+              />
 
               <label htmlFor="L">L</label>
-              <input type="radio" name="size" id="L" value="L" onChange={Hanldesize} required/>
+              <input
+                type="radio"
+                name="size"
+                id="L"
+                value="L"
+                onChange={Hanldesize}
+                required
+              />
 
               <label htmlFor="X">X</label>
-              <input type="radio" name="size" id="X" value="X" onChange={Hanldesize} required/>
+              <input
+                type="radio"
+                name="size"
+                id="X"
+                value="X"
+                onChange={Hanldesize}
+                required
+              />
 
               <label htmlFor="XL">XL</label>
-              <input type="radio" name="size" id="XL" value="XL" onChange={Hanldesize} required/>
+              <input
+                type="radio"
+                name="size"
+                id="XL"
+                value="XL"
+                onChange={Hanldesize}
+                required
+              />
 
               <label htmlFor="XXL">XXL</label>
-              <input type="radio" name="size" id="XXL" value="XXL" onChange={Hanldesize} required/>
+              <input
+                type="radio"
+                name="size"
+                id="XXL"
+                value="XXL"
+                onChange={Hanldesize}
+                required
+              />
             </div>
           </div>
-          <button type="submit">
-            ADD TO CART
-          </button>
+
+          <Popup
+            position="right center"
+            open={isOpen}
+            closeOnDocumentClick={false}
+            className="custom-popup"
+          >
+            <div className="popup-content">
+              <h2>ADDED!!</h2>
+              <p>Product Successfully Added To Cart</p>
+            </div>
+          </Popup>
+          <button type="submit">ADD TO CART</button>
         </form>
       </div>
     </div>

@@ -187,7 +187,7 @@ const LoginSignup = () => {
               />
               
               <button type='submit'>LOGIN</button>
-              <div className='forget'><a href="/forget">Forget Password?</a></div>
+              {/* <div className='forget'><a href="/forget">Forget Password?</a></div> */}
             </form>
           </div>
         </div>

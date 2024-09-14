@@ -3,14 +3,26 @@ import { useContext } from 'react'
 import {ShopContext} from '../Context/ShopContext'
 import dropdown_icon from '../Components/Assets/dropdown.png'
 import Items from '../Components/Items/Items'
+import men_banner from '../Components/Assets/mens.png';
+import women_banner from '../Components/Assets/womens.png';
+import kid_banner from '../Components/Assets/kids.png';
+import {useLocation } from 'react-router-dom';
+
+const bannerImages = {
+  '/mens': men_banner,
+  '/womens': women_banner,
+  '/kids': kid_banner,
+};
 
 const ShopCategory = (props) => {
-  
+  const location = useLocation();
   const {all_products}=useContext(ShopContext)
+
+  const banner = bannerImages[location.pathname] || '';
   return (
     
     <div className='shop-category'>
-          <img src={props.banner} alt="" className='shopcategory-banner'/>
+          <img src={banner} alt="" className='shopcategory-banner'/>
       <div className="shopcategory-indexsort">
           <p><span>Showing 1-12</span> out of 36 </p>
 

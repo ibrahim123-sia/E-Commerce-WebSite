@@ -1,5 +1,5 @@
 .cartitems{
-    margin: 40px 170px;
+    margin: 40px 150px;
 }
 .cartitems hr{
     height: 3px;
@@ -9,7 +9,17 @@
 
 .cartitems-forget-main{
     display: grid;
-    grid-template-columns:0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:0.5fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 0px 0px;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+    
+}.cartitems-forget-main1{
+    display: grid;
+    grid-template-columns:0.5fr 2.7fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     gap: 40px;
     padding: 0px 0px;
@@ -98,4 +108,5 @@
     cursor: pointer;
     
 }
+
 
