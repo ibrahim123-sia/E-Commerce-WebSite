@@ -64,18 +64,20 @@
 }
 .nav-login-cart button{
     border:1px solid #7a7a7a ;
-    height: 35px;
-    width: 95px;
+    height: 30px;border: none;
+    width: 85px;
     outline: none;
     border-radius: 75px;
-    color: #515151;
-    font-size: 15px;
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 500;
-    background: white;
+    background: rgb(240, 74, 74);
     cursor: pointer;
 }
-.nav-login-cart button:active{
-    background:#f3f3f3 ;
+.nav-login-cart button:hover{
+    color: white;
+    
+    background:#ff0000 ;
 }
 .nav-cart-count {
     width: 10px;
@@ -92,4 +94,7 @@
     padding: 6px;
 }
 
-
+.welname{
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}

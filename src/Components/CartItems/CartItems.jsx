@@ -1,11 +1,16 @@
-import React, { useContext } from 'react'
+import React, {useState, useContext } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/deleteicon.png'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
+
 
 const CartItems = () => {
-
-  const { getTotalCartAmount, all_products, cartItems, removefromCart } = useContext(ShopContext);
+  const [open, setOpen] = useState(false);
+  
+  const { getTotalCartAmount, all_products, cartItems, removefromCart ,size} = useContext(ShopContext);
 
   return (
     <div className='cartitems'>
@@ -14,6 +19,7 @@ const CartItems = () => {
         <p>Title</p>
         <p>Price</p>
         <p>Quantity</p>
+        <p>Size</p>
         <p>Total</p>
         <p>Remove</p>
       </div>
@@ -30,6 +36,7 @@ const CartItems = () => {
                 <p>{e.name}</p>
                 <p>${e.new_price}</p>
                 <button className='cartitem-quantity'>{itemCount}</button>
+                <p>{size}</p>
                 <p>${e.new_price * itemCount}</p>
                 <img className='carticon-remove-icon' src={remove_icon} alt="Remove item" onClick={() => removefromCart(e.id)} />
               </div>
@@ -59,7 +66,11 @@ const CartItems = () => {
               <h3>${getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          
+        <button >PROCEED TO CHECKOUT</button>                   
+                
+
+
         </div>
         <div className="cartitems-promocode">
           <p>If You Have a Promo Code, Enter It Here</p>

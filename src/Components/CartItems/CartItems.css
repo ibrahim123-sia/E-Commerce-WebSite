@@ -6,15 +6,17 @@
     background: #e2e2e2;
     border: 0;
 }
+
 .cartitems-forget-main{
     display: grid;
-    grid-template-columns:0.5fr 2fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns:0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    gap: 75px;
+    gap: 40px;
     padding: 0px 0px;
     color: #454545;
     font-size: 18px;
     font-weight: 600;
+    
 }
 .cartitems-format{
     font-size: 17px;
